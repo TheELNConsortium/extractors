@@ -18,6 +18,31 @@ Find a common way to extract metadata and thumbnails from research data files
 - examples do not use try-except (it can be used by advanced users)
 - no failsafes or checks in extractors (input and output should verify itself)
 
+### Design details
+- All extractors have a filename of type: 'extractor_png.py', where png is the file-extension of the
+  files to be processed. This allows the fast (and not foul-proof) way of identifying which extractor
+  to use
+- Function has to look like
+```
+def use(filePath, recipe=''):
+  """
+  Args:
+     filePath (string): full path file name
+     recipe (string): supplied to guide recipes
+                      recipe is / separated hierarchical elements parent->child
+  Returns:
+    dict: containing image, metaVendor, metaUser, recipe
+  """
+```
+- Recipes are defined and can be regex-identified by:
+```
+if ..... #:
+else     #:
+```
+- Recipe examples
+  - 'image/png/crop'
+  - 'image/png'
+
 ## Table of content
 - example implementations in python
 - example data files
