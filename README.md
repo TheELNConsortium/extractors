@@ -27,7 +27,7 @@ Find a common way to extract metadata and thumbnails from research data files
 ```
 ./testExtractor.py DataFiles/simple.png
 ./testExtractor.py DataFiles/simple.png image/crop
- ./testExtractor.py DataFiles/simple.csv
- ./testExtractor.py DataFiles/simple.csv red
+./testExtractor.py DataFiles/simple.csv
+./testExtractor.py DataFiles/simple.csv red
 ```
 
